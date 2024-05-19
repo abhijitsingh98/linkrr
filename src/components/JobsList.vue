@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div v-if="filteredJobs.length === 0 && selectedDomain && yearsExperience">
+      <span
+        >No jobs available for now, please check back again in couple of
+        days</span
+      >
+    </div>
     <div
       v-for="(job, index) in filteredJobs"
       v-bind:key="job.jobLink"
@@ -32,7 +38,7 @@
 <script setup>
 import { defineProps, computed } from "vue";
 import { jobsList } from "../JobsList";
-import { ExperienceCategory } from "./Constants";
+import { ExperienceCategory, DomainWithoutSpecialization } from "./Constants";
 
 const props = defineProps({
   selectedDomain: {
@@ -49,6 +55,13 @@ const props = defineProps({
   },
 });
 const filteredJobs = computed(() => {
+  if (DomainWithoutSpecialization.includes(props.selectedDomain)) {
+    return jobsList.filter(
+      (job) =>
+        job.domain === props.selectedDomain &&
+        job.experience_category.includes(props.yearsExperience)
+    );
+  }
   return jobsList.filter(
     (job) =>
       job.domain === props.selectedDomain &&

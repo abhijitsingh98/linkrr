@@ -2,30 +2,6 @@ import { ExperienceCategory } from "./components/Constants";
 
 export const jobsList = [
   {
-    domain: "Frontend",
-    specialization: "Reactjs",
-    company_name: "Autodesk",
-    job_title: "Frontend Developer (React)",
-    salary: "Salary offered - 8LPA+",
-    experience: "Exp : 0-2 years",
-    city: "Pune",
-    wfh: "Hybrid",
-    jobLink: "--",
-    experience_category: [ExperienceCategory.Associate],
-  },
-  {
-    domain: "Backend",
-    specialization: "Node.js",
-    company_name: "Intellias",
-    job_title: "Backend Developer (Node.js)",
-    salary: "Salary offered - 18LPA+",
-    experience: "Exp : 6-8 years",
-    city: "Pune",
-    wfh: "Hybrid",
-    jobLink: "--1",
-    experience_category: [ExperienceCategory.Principal],
-  },
-  {
     domain: "QA",
     specialization: "Automation",
     company_name: "Capgemini",
@@ -272,6 +248,76 @@ export const jobsList = [
     experience_category: [
       ExperienceCategory.Senior,
       ExperienceCategory.Principal,
+    ],
+  },
+  {
+    domain: "Backend",
+    specialization: "Java",
+    company_name: "Amazon",
+    job_title: "Senior Software Engineer - Backend",
+    salary: "Salary offered - 38LPA+",
+    experience: "4-8 Years",
+    city: "Bangalore",
+    wfh: "Hybrid",
+    jobLink:
+      "https://www.instahyre.com/job-314410-senior-software-engineer-backend-at-amazon-bangalore/",
+    experience_category: [
+      ExperienceCategory.Senior,
+      ExperienceCategory.Principal,
+    ],
+  },
+  {
+    domain: "Data Analyst",
+    company_name: "Prodigal",
+    job_title: "Data Analyst",
+    salary: "Salary offered - 12LPA+",
+    experience: "1-3Years",
+    city: "Mumbai",
+    wfh: "In Office",
+    Column11:
+      "https://www.naukri.com/job-listings-data-analyst-prodigal-mumbai-1-to-3-years-100524502062?src=seo_srp&sid=17158871129641640&xp=15&px=1",
+    experience_category: [ExperienceCategory.Associate],
+  },
+  {
+    domain: "Data Analyst",
+    company_name: "Accenture",
+    job_title: "Data Engineer",
+    salary: "Salary offered - 18LPA+",
+    experience: "5-7 years",
+    city: "Pune",
+    wfh: "Hybrid",
+    Column11:
+      "https://www.naukri.com/job-listings-data-engineer-accenture-solutions-pvt-ltd-pune-5-to-7-years-100524911778?src=cluster&sid=17158871129641640_3&xp=7&px=1",
+    experience_category: [
+      ExperienceCategory.Senior,
+      ExperienceCategory.Principal,
+    ],
+  },
+  {
+    domain: "Data Analyst",
+    company_name: "EA Games",
+    job_title: "Data Analyst ( On Contract )",
+    salary: "Above Market standards",
+    experience: "2-3 Years",
+    city: "Hyderabad",
+    wfh: "Hybrid",
+    Column11:
+      "https://www.naukri.com/job-listings-data-analyst-on-contract-electronic-arts-hyderabad-2-to-3-years-210920500361?src=cluster&sid=17158871129641640_5&xp=2&px=2",
+    experience_category: [ExperienceCategory.Associate],
+  },
+  {
+    domain: "Data Analyst",
+    company_name: "FedEx TSCS (India) Pvt Ltd",
+    job_title: "Data Analyst",
+    salary: "Salary offered - 9LPA+",
+    experience: "1-4 Years",
+    city: "Multiple Locations",
+    wfh: "Hybrid",
+    Column11:
+      "https://www.naukri.com/job-listings-data-analyst-fedex-tscs-india-pvt-ltd-mumbai-new-delhi-pune-bengaluru-1-to-4-years-150524500255?src=cluster&sid=17158871129641640_7&xp=4&px=1",
+    experience_category: [
+      ExperienceCategory.Senior,
+      ExperienceCategory.Associate,
     ],
   },
 ];

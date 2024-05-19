@@ -9,7 +9,7 @@
         dense
       ></v-select>
       <v-select
-        :disabled="!selectedDomain"
+        :disabled="isSpecializationDropdownDisabled"
         v-model="selectedSpecialization"
         :items="specializationList"
         label="Specialization"
@@ -19,7 +19,6 @@
     </div>
     <div class="mx-3">
       <v-select
-        :disabled="!selectedDomain || !selectedSpecialization"
         v-model="yearsExperience"
         :items="yearsExperienceList"
         label="Years of Experience"
@@ -28,7 +27,6 @@
       ></v-select>
     </div>
     <jobs-list
-      v-if="selectedDomain && selectedSpecialization && yearsExperience"
       :selectedDomain="selectedDomain"
       :selectedSpecialization="selectedSpecialization"
       :yearsExperience="yearsExperience"
@@ -37,7 +35,11 @@
 </template>
 <script setup>
 import { ref, computed } from "vue";
-import { specializationsData, ExperienceCategory } from "./Constants";
+import {
+  specializationsData,
+  ExperienceCategory,
+  DomainWithoutSpecialization,
+} from "./Constants";
 import JobsList from "./JobsList.vue";
 
 const selectedDomain = ref(null);
@@ -51,9 +53,15 @@ const domainsList = ref([
   "QA",
   "Devops",
   "Data Analyst",
-  "Others",
+  "Magento",
+  "Salesforce",
 ]);
 
+const isSpecializationDropdownDisabled = computed(
+  () =>
+    !selectedDomain.value ||
+    DomainWithoutSpecialization.includes(selectedDomain.value)
+);
 const specializationList = computed(
   () => specializationsData[selectedDomain.value]
 );
